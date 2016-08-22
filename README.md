@@ -81,6 +81,12 @@ Ng = geoid height
 &nbsp;&nbsp;&nbsp;```shapelib\shpopen.c shapelib\dbfopen.c shapelib\safileio.c shapelib\shptree.c -o gk-shp -lm -rt```  
 or  
 ```$ make -f Makefile.unix```
+#### Unix (Ubuntu) on Raspberry Pi
+```$ cc -O2 -Wall -marm -march=armv6 -mfloat-abi=hard -mfpu=vfp gk-slo.c util.c geo.c -o gk-slo -lm -lrt```  
+```$ cc -O2 -Wall -marm -march=armv6 -mfloat-abi=hard -mfpu=vfp -Ishapelib gk-shp.c util.c geo.c \ ```  
+&nbsp;&nbsp;&nbsp;```shapelib\shpopen.c shapelib\dbfopen.c shapelib\safileio.c shapelib\shptree.c -o gk-shp -lm -rt```  
+or  
+```$ make -f Makefile.rpi```
 #### MinGW on Windows
 ```$ gcc -O2 -Wall -msse2 -mfpmath=sse -D_WCHAR gk-slo.c util.c geo.c -o gk-slo.exe```  
 ```$ gcc -O2 -Wall -msse2 -mfpmath=sse -Ishapelib gk-shp.c util.c geo.c \ ```  
