@@ -6,12 +6,12 @@ RANLIB = ranlib
 RM = rm -f
 CP = cp
 
-#DEBUG = -O2
-DEBUG = -g
+DEBUG = -O2
+#DEBUG = -g
 CFLAGS = -Wall -marm -march=armv6 -mfloat-abi=hard -mfpu=vfp
 IPATH = -Ishapelib
-#LDFLAGS = -s
-LDFLAGS = 
+LDFLAGS = -s
+#LDFLAGS = 
 LPATH = 
 LIBS = -lm -lrt
 
